@@ -1,0 +1,1 @@
+// Écran spécifique pour le jeu

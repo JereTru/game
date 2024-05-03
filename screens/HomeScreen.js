@@ -1,0 +1,1 @@
+// Écran d'accueil de l'application
