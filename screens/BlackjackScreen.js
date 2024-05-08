@@ -1,18 +1,23 @@
 import React from 'react';
-import { View, StyleSheet, Button } from 'react-native';
-import Blackjack from '../games/Blackjack/Blackjack';
+import { View, StyleSheet, Text } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import Button from '../components/ui/Button';
+
+// import Blackjack from '../games/Blackjack/Blackjack';
 
 const BlackjackScreen = () => {
   const navigation = useNavigation();
 
   return (
     <View style={styles.container}>
-      <Blackjack />
+      {/* <Blackjack /> */}
+        <Text style={styles.text}>
+            Jeux Sélectionné Blackjack
+        </Text>
       <Button
-        title="Back to Home"
-        onPress={() => navigation.goBack()}
-        color="#1e90ff"
+          title={"<< Go Back"}
+          onPress={() => navigation.goBack()}
+          style={styles.buttonBack}
       />
     </View>
   );
@@ -24,6 +29,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#fff'
+  },
+  text: {
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+  buttonBack: {
+    backgroundColor: '#dd5555'
   }
 });
 
